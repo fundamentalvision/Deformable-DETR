@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # ------------------------------------------------------------------------------------------------
 # Deformable DETR
 # Copyright (c) 2020 SenseTime. All Rights Reserved.
