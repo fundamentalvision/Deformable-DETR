@@ -4,10 +4,6 @@ By [Xizhou Zhu](https://scholar.google.com/citations?user=02RXI00AAAAJ),  [Weiji
 
 This repository is an official implementation of the paper [Deformable DETR: Deformable Transformers for End-to-End Object Detection](https://arxiv.org/abs/2010.04159).
 
-## Update
-
-**[2020.12.07]** Fix a bug of sampling offset normalization (see [this issue](https://github.com/fundamentalvision/Deformable-DETR/issues/6)) in the MSDeformAttn module. The final accuracy on COCO is slightly improved. Code and pre-trained models has been updated. This bug only occurs in this released version but not in the original implementation used in our paper.
-
 
 ## Introduction
 
@@ -22,6 +18,10 @@ This repository is an official implementation of the paper [Deformable DETR: Def
 ## License
 
 This project is released under the [Apache 2.0 license](./LICENSE).
+
+## Changelog
+
+See [changelog.md]() for detailed logs of major changes. 
 
 
 ## Citing Deformable DETR
