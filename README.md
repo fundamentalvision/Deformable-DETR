@@ -21,7 +21,7 @@ This project is released under the [Apache 2.0 license](./LICENSE).
 
 ## Changelog
 
-See [changelog.md]() for detailed logs of major changes. 
+See [changelog.md](./docs/changelog.md) for detailed logs of major changes. 
 
 
 ## Citing Deformable DETR
