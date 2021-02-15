@@ -17,6 +17,7 @@ This repository is an official implementation of the paper [Deformable DETR: Def
 
 ##Inference on single Image
 
+
 !python  demo.py --resume modelzoo/r50_deformable_detr-checkpoint.pth --img_path '/content/Deformable-DETR/Brazil vs Germany Men Football Final Rio 201.png'
 
 ## License
