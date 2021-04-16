@@ -1,0 +1,59 @@
+# output dir
+data
+output
+instant_test_output
+inference_test_output
+*.egg-info/
+
+
+*.jpg
+*.png
+*.txt
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+AdelaiDet.egg-info/
+build/
+dist/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+.idea
+.vscode
+.python-version
+
+# project dirs
+demo/performance.py
+demo/demo2.py
+train.sh
+benchmark.sh
+checkpoints/
+*.DS_Store
+datasets/
+output_*/
+README.md.bk
+adet/
+configs_old/
+demo/
+detectron2/
+docker/
+pattern_b/
+#setup.py
+#tools/
