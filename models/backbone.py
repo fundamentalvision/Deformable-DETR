@@ -22,6 +22,7 @@ from typing import Dict, List
 from util.misc import NestedTensor, is_main_process
 
 from .position_encoding import build_position_encoding
+from detectron2.modeling import BACKBONE_REGISTRY, Backbone, ShapeSpec
 
 
 class FrozenBatchNorm2d(torch.nn.Module):
@@ -93,6 +94,7 @@ class BackboneBase(nn.Module):
         return out
 
 
+#class Backbone(BackboneBase):
 class Backbone(BackboneBase):
     """ResNet backbone with frozen BatchNorm."""
     def __init__(self, name: str,
@@ -107,6 +109,22 @@ class Backbone(BackboneBase):
         super().__init__(backbone, train_backbone, return_interm_layers)
         if dilation:
             self.strides[-1] = self.strides[-1] // 2
+
+#@BACKBONE_REGISTRY.register()
+#def build_deformable_backbone(cfg, input_shape: ShapeSpec):
+#    """
+#    Args:
+#        cfg: a detectron2 CfgNode
+#    Returns:
+#        backbone: module, must be a subclass of :class: `Backbone`.
+#    """
+#    pass
+#    depth = cfg.MODEL.RESNETS.DEPTH
+#    backbone_name = f"resnet{depth}"
+#    return_interm_layers = cfg.MODEL.MASK_ON or (cfg.MODEL.DeformableDETR.NUM_FEATURE_LEVELS > 1)
+#    backbone = Backbone(backbone_name, True, return_interm_layers, cfg.MODEL.DeformableDETR.DILATION)
+#    return backbone
+
 
 
 class Joiner(nn.Sequential):
