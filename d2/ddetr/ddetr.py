@@ -64,6 +64,7 @@ class MaskedBackbone(nn.Module):
 #feature_strides:  [8, 16, 32]
 #num_channels:  2048]
 
+    # ImageList
     def forward(self, images):
         features = self.backbone(images.tensor)
         masks = self.mask_out_padding(
