@@ -442,7 +442,9 @@ class MLP(nn.Module):
 
 
 def build(args):
-    num_classes = 20 if args.dataset_file != 'coco' else 91
+    # coco has 91 classes originally.
+    num_classes = args.num_classes if args.num_classes != 91 else 91 
+    print("Building final layer with classes : ", num_classes)
     if args.dataset_file == "coco_panoptic":
         num_classes = 250
     device = torch.device(args.device)
